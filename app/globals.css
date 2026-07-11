@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-baloo: "Baloo 2", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: #2b1b3d;
+  background-image: radial-gradient(
+      circle at 15% 10%,
+      rgba(255, 193, 69, 0.16) 0%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 85%, rgba(255, 111, 145, 0.14) 0%, transparent 45%);
+  min-height: 100vh;
+}
+
+/* Jeepney destination-signboard style chip, used for tag/category filters */
+.signboard-chip {
+  border: 2px solid rgba(255, 249, 242, 0.18);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.signboard-chip:hover {
+  transform: translateY(-2px);
+}
+.signboard-chip[data-active="true"] {
+  background-color: #ffc145;
+  color: #1f1330;
+  border-color: #ffc145;
+  box-shadow: 0 4px 0 rgba(31, 19, 48, 0.35);
+}
+
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+::selection {
+  background: #ff6f91;
+  color: #fff9f2;
+}
