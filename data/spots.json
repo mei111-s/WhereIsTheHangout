@@ -3,29 +3,38 @@
     "id": "seed-1",
     "area": "makati",
     "category": "food",
-    "tags": [],
-    "name": "Taiwan Kitchen (Legazpi)",
+    "tags": [
+      "asian",
+      "taiwanese"
+    ],
+    "name": "Taiwan Kitchen 小台北下午茶 Cafe",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/mSwMbhk.png",
+    "mapsLink": "https://maps.app.goo.gl/d9Vn1jxaNDsFVEXX6",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000000
+    "createdAt": 1710000000000,
+    "address": "100 C Dela Rosa St, corner Gil, Legazpi Village, Makati City, 1229 Metro Manila"
   },
   {
     "id": "seed-2",
     "area": "makati",
     "category": "food",
-    "tags": [],
-    "name": "Onlypans (Poblacion)",
+    "tags": [
+      "tacos",
+      "birria",
+      "mexican"
+    ],
+    "name": "Onlypans ",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/7m7ProR.png",
+    "mapsLink": "https://maps.app.goo.gl/haY8bE11M72qmBfu6",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000001
+    "createdAt": 1710000000001,
+    "address": "5663 Don Pedro, Poblacion Makati, Makati City, 1210 Metro Manila"
   },
   {
     "id": "seed-3",

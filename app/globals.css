@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #FFF0F5;
+  background-color: #1E212C;
   min-height: 100vh;
 }
 
@@ -20,9 +20,9 @@ body {
   transform: translateY(-1px);
 }
 .pill-chip[data-active="true"] {
-  background-color: #E91E63;
-  color: #FFF8F3;
-  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.3);
+  background-color: #8B6FB8;
+  color: #EDEAF2;
+  box-shadow: 0 4px 14px rgba(139, 111, 184, 0.4);
 }
 
 .card-hover {
@@ -30,10 +30,10 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(175, 139, 135, 0.22);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
 ::selection {
-  background: #E91E63;
-  color: #FFF8F3;
+  background: #8B6FB8;
+  color: #EDEAF2;
 }

@@ -4,26 +4,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // From the requested palette
-        sandlight: "#F1DCCD",
-        mauve: "#C29D93",
-        cocoa: "#AF8B87",
-        pinkbright: "#FFBFCC",
-        pinklight: "#FFD4DF",
-        blushbg: "#FFF0F5",
+        // From the requested palette (dark navy → light lavender/gray)
+        navydark: "#1E212C",
+        plum: "#302C40",
+        violet: "#4C3D74",
+        lavender: "#B39FC7",
+        graylight: "#C8C5C5",
 
         // Semantic aliases used throughout the app (unchanged names,
         // repointed to the new palette so components didn't need edits)
-        blush: "#FFF0F5",      // page background
-        blushdeep: "#FFD4DF",  // pill/tag chip backgrounds
-        cream: "#FFFFFF",      // card surfaces (crisp white for contrast)
-        ivory: "#FFF8F3",      // text on colored buttons/banners
-        maroon: "#AF8B87",     // headings, nav text, dark accents
-        "maroon-light": "#C29D93",
-        cherry: "#E91E63",     // primary CTA / accent — vibrant raspberry
-        gold: "#FFBFCC",
-        ink: "#4A3C3C",        // primary body text — dark charcoal-brown
-        inkmuted: "#776B6B",   // secondary/muted text
+        sandlight: "#252231",  // sticky header background
+        blush: "#1E212C",      // page background
+        blushdeep: "#4C3D74",  // pill/tag chip backgrounds
+        cream: "#302C40",      // card surfaces
+        ivory: "#EDEAF2",      // light text on colored buttons/banners
+        maroon: "#6E58A8",     // headings, nav text, banner backgrounds
+        "maroon-light": "#8A72C4",
+        mauve: "#7A649E",      // borders
+        cherry: "#8B6FB8",     // primary CTA / accent (deepened lavender for contrast)
+        gold: "#B39FC7",       // decorative accents only (true pale lavender)
+        ink: "#C8C5C5",        // primary body text
+        inkmuted: "#8B8794",   // secondary/muted text
       },
       fontFamily: {
         display: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],

@@ -51,15 +51,17 @@ export default function RootLayout({ children }) {
 
           {/* Category quick-nav strip */}
           <nav className="bg-maroon">
-            <div className="max-w-5xl mx-auto px-5 py-2.5 flex items-center gap-5 overflow-x-auto">
-              {CATEGORIES.map((cat) => (
-                <Link
-                  key={cat.slug}
-                  href={`/category/${cat.slug}`}
-                  className="text-ivory/85 hover:text-ivory font-display font-semibold text-sm whitespace-nowrap transition-colors"
-                >
-                  {cat.icon} {cat.name}
-                </Link>
+            <div className="max-w-5xl mx-auto px-5 py-2.5 flex items-center gap-3 overflow-x-auto">
+              {CATEGORIES.map((cat, i) => (
+                <span key={cat.slug} className="flex items-center gap-3 whitespace-nowrap">
+                  {i > 0 && <span className="text-ivory/40">|</span>}
+                  <Link
+                    href={`/category/${cat.slug}`}
+                    className="text-ivory/85 hover:text-ivory font-display font-semibold text-sm transition-colors"
+                  >
+                    {cat.name}
+                  </Link>
+                </span>
               ))}
             </div>
           </nav>
@@ -69,7 +71,15 @@ export default function RootLayout({ children }) {
 
         <footer className="mt-10">
           <div className="bg-maroon text-ivory text-center py-4 font-display font-bold">
-            Liyag — our little map of Manila, made with love
+            Liyag by{" "}
+            <a
+              href="https://x.com/m3i666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cherry transition-colors"
+            >
+              mei & friends 
+            </a>
           </div>
         </footer>
       </body>

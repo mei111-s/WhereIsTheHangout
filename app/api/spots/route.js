@@ -49,6 +49,7 @@ export async function POST(request) {
     commute: body.commute || "",
     menuLink: body.menuLink || "",
     priceRange: body.priceRange || "",
+    priceMin: typeof body.priceMin === "number" ? body.priceMin : null,
     status: "published",
   });
 

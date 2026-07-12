@@ -2,16 +2,6 @@ import Link from "next/link";
 import { AREAS } from "@/lib/data";
 import { getAllSpots } from "@/lib/store";
 
-const AREA_ICONS = {
-  makati: "🏙️",
-  bgc: "🌆",
-  qc: "🏘️",
-  manila: "🏛️",
-  pasig: "🌉",
-  pasay: "🛍️",
-  mandaluyong: "☕",
-};
-
 export default async function HomePage() {
   const spots = await getAllSpots();
 
@@ -54,24 +44,18 @@ export default async function HomePage() {
                 className="card-hover group relative block rounded-signboard overflow-hidden border border-mauve/20 shadow-card"
                 style={{
                   backgroundImage:
-                    "linear-gradient(135deg, rgba(175,139,135,0.95), rgba(233,30,99,0.85))",
+                    "linear-gradient(135deg, rgba(76,61,116,0.95), rgba(139,111,184,0.85))",
                 }}
               >
                 <div className="p-6 relative z-10">
                   <div className="flex items-start justify-between">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl drop-shadow-sm">
-                        {AREA_ICONS[area.slug] || "📍"}
-                      </span>
-                      <h3 className="font-display text-2xl font-bold text-ivory">
-                        {area.name}
-                      </h3>
-                    </div>
+                    <h3 className="font-display text-2xl font-bold text-ivory">
+                      {area.name}
+                    </h3>
                     <span className="font-mono text-xs text-ivory/80 mt-1 whitespace-nowrap">
                       {count} spot{count === 1 ? "" : "s"}
                     </span>
                   </div>
-                  <p className="text-ivory/85 text-sm mt-2">{area.blurb}</p>
                 </div>
               </Link>
             );

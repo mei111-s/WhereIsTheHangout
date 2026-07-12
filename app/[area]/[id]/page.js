@@ -40,7 +40,7 @@ export default async function SpotDetailPage({ params }) {
           <div className="flex items-start justify-between gap-3 flex-wrap">
             <div>
               <p className="font-mono text-xs uppercase tracking-wide text-inkmuted mb-1">
-                {category?.icon} {category?.name} · {area?.name}
+                {category?.name} · {area?.name}
               </p>
               <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-maroon leading-tight">
                 {spot.name}

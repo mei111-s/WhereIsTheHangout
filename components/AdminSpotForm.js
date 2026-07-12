@@ -14,6 +14,7 @@ const EMPTY = {
   commute: "",
   menuLink: "",
   priceRange: "",
+  priceMin: "",
   tags: "",
 };
 
@@ -26,6 +27,7 @@ export default function AdminSpotForm({ initial, onSubmit, onCancel, submitLabel
       setForm({
         ...EMPTY,
         ...initial,
+        priceMin: initial.priceMin ?? "",
         tags: (initial.tags || []).join(", "),
       });
     } else {
@@ -42,6 +44,7 @@ export default function AdminSpotForm({ initial, onSubmit, onCancel, submitLabel
     setSaving(true);
     const payload = {
       ...form,
+      priceMin: form.priceMin === "" ? null : Number(form.priceMin),
       tags: form.tags
         .split(",")
         .map((t) => t.trim())
@@ -53,7 +56,7 @@ export default function AdminSpotForm({ initial, onSubmit, onCancel, submitLabel
 
   const inputClass =
     "w-full rounded-signboard bg-blush border border-maroon/10 px-3 py-2 text-ink focus:outline-none focus:ring-2 focus:ring-cherry/40";
-  const labelClass = "block font-mono text-xs text-ink/50 mb-1";
+  const labelClass = "block font-mono text-xs text-inkmuted mb-1";
 
   return (
     <form
@@ -84,7 +87,7 @@ export default function AdminSpotForm({ initial, onSubmit, onCancel, submitLabel
         >
           {CATEGORIES.map((c) => (
             <option key={c.slug} value={c.slug}>
-              {c.icon} {c.name}
+              {c.name}
             </option>
           ))}
         </select>
@@ -170,6 +173,20 @@ export default function AdminSpotForm({ initial, onSubmit, onCancel, submitLabel
           onChange={(e) => update("priceRange", e.target.value)}
           className={inputClass}
           placeholder="₱ / ₱₱ / ₱₱₱"
+        />
+      </div>
+
+      <div>
+        <label className={labelClass}>
+          Price per person, ₱ (for sorting)
+        </label>
+        <input
+          type="number"
+          min="0"
+          value={form.priceMin}
+          onChange={(e) => update("priceMin", e.target.value)}
+          className={inputClass}
+          placeholder="e.g. 350"
         />
       </div>
 

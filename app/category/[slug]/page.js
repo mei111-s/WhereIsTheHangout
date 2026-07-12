@@ -17,7 +17,7 @@ export default async function CategoryPage({ params }) {
         ← all areas
       </Link>
       <h1 className="font-display text-4xl font-extrabold text-maroon mt-2 mb-1">
-        {category.icon} {category.name}
+        {category.name}
       </h1>
       <p className="text-inkmuted mb-6">
         Every {category.name.toLowerCase()} spot we've got, across the city.

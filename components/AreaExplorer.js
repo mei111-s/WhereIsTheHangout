@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { CATEGORIES } from "@/lib/data";
+import { sortSpots, SORT_OPTIONS } from "@/lib/sort";
 import SpotCard from "@/components/SpotCard";
 
 export default function AreaExplorer({ spots }) {
@@ -14,6 +15,7 @@ export default function AreaExplorer({ spots }) {
     categoriesWithSpots[0]?.slug || null
   );
   const [activeTag, setActiveTag] = useState(null);
+  const [sortBy, setSortBy] = useState("name-asc");
 
   const spotsInCategory = useMemo(
     () => spots.filter((s) => s.category === activeCategory),
@@ -27,9 +29,11 @@ export default function AreaExplorer({ spots }) {
   }, [spotsInCategory]);
 
   const visibleSpots = useMemo(() => {
-    if (!activeTag) return spotsInCategory;
-    return spotsInCategory.filter((s) => (s.tags || []).includes(activeTag));
-  }, [spotsInCategory, activeTag]);
+    const filtered = activeTag
+      ? spotsInCategory.filter((s) => (s.tags || []).includes(activeTag))
+      : spotsInCategory;
+    return sortSpots(filtered, sortBy);
+  }, [spotsInCategory, activeTag, sortBy]);
 
   if (spots.length === 0) {
     return (
@@ -57,7 +61,7 @@ export default function AreaExplorer({ spots }) {
             }}
             className="pill-chip rounded-pill px-4 py-2 font-display font-semibold text-sm bg-cream border border-maroon/10 text-maroon"
           >
-            {cat.icon} {cat.name}
+            {cat.name}
           </button>
         ))}
       </div>
@@ -84,6 +88,24 @@ export default function AreaExplorer({ spots }) {
           ))}
         </div>
       )}
+
+      {/* Sort control */}
+      <div className="flex items-center gap-2 mb-4">
+        <label className="font-mono text-[11px] uppercase text-inkmuted">
+          Sort:
+        </label>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="rounded-pill bg-cream border border-mauve/20 px-3 py-1.5 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-cherry/40"
+        >
+          {SORT_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
       {/* Spot grid */}
       {visibleSpots.length === 0 ? (

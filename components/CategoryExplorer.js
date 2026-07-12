@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AREAS } from "@/lib/data";
+import { sortSpots, SORT_OPTIONS } from "@/lib/sort";
 import SpotCard from "@/components/SpotCard";
 
 export default function CategoryExplorer({ spots }) {
@@ -12,6 +13,7 @@ export default function CategoryExplorer({ spots }) {
 
   const [activeArea, setActiveArea] = useState(null); // null = all areas
   const [activeTag, setActiveTag] = useState(null);
+  const [sortBy, setSortBy] = useState("name-asc");
 
   const spotsInArea = useMemo(
     () => (activeArea ? spots.filter((s) => s.area === activeArea) : spots),
@@ -25,9 +27,11 @@ export default function CategoryExplorer({ spots }) {
   }, [spotsInArea]);
 
   const visibleSpots = useMemo(() => {
-    if (!activeTag) return spotsInArea;
-    return spotsInArea.filter((s) => (s.tags || []).includes(activeTag));
-  }, [spotsInArea, activeTag]);
+    const filtered = activeTag
+      ? spotsInArea.filter((s) => (s.tags || []).includes(activeTag))
+      : spotsInArea;
+    return sortSpots(filtered, sortBy);
+  }, [spotsInArea, activeTag, sortBy]);
 
   if (spots.length === 0) {
     return <p className="text-inkmuted mt-6">No spots in this category yet.</p>;
@@ -64,7 +68,7 @@ export default function CategoryExplorer({ spots }) {
 
       {/* Tag filters */}
       {availableTags.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 mb-6">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           <button
             data-active={activeTag === null}
             onClick={() => setActiveTag(null)}
@@ -84,6 +88,24 @@ export default function CategoryExplorer({ spots }) {
           ))}
         </div>
       )}
+
+      {/* Sort control */}
+      <div className="flex items-center gap-2 mb-4">
+        <label className="font-mono text-[11px] uppercase text-inkmuted">
+          Sort:
+        </label>
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          className="rounded-pill bg-cream border border-mauve/20 px-3 py-1.5 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-cherry/40"
+        >
+          {SORT_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
 
       {/* Spot grid */}
       {visibleSpots.length === 0 ? (
