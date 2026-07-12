@@ -11,7 +11,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Liyag | Manila Date & Friend Spots",
+  title: "Gala where? | Manila Date & Friend Spots",
   description: "Our little map of cute date and hangout spots around Manila.",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <header className="bg-sandlight border-b border-mauve/20 sticky top-0 z-30">
           <div className="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between gap-4 flex-wrap">
             <Link href="/" className="font-display text-2xl font-extrabold text-maroon tracking-tight shrink-0">
-              Liyag
+              Gala where?
             </Link>
             <div className="flex-1 flex justify-center min-w-[180px]">
               <SearchBar />
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
 
         <footer className="mt-10">
           <div className="bg-maroon text-ivory text-center py-4 font-display font-bold">
-            Liyag by{" "}
+            Gala where? by{" "}
             <a
               href="https://x.com/m3i666"
               target="_blank"

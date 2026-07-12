@@ -15,7 +15,7 @@ export default async function HomePage() {
            *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚  
         </p>
         <h1 className="font-display text-5xl sm:text-6xl font-extrabold leading-[1.05] mb-4 max-w-lg">
-          Cute spots around Manila, picked by us.
+          Cute spots around Manila, picked by us ^^
         </h1>
         <p className="text-ivory max-w-md mb-7 text-base sm:text-lg">
           Pick a city to browse: food, cafes, activities, && more. Every
