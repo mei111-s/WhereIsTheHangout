@@ -40,43 +40,55 @@
     "id": "seed-3",
     "area": "makati",
     "category": "cafes",
-    "tags": [],
-    "name": "Panco (Legazpi)",
+    "tags": [
+      "breakfast",
+      "australian"
+    ],
+    "name": "Panco Cafe",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/5UxyUJA.png",
+    "mapsLink": "https://maps.app.goo.gl/eJ8cnh15yWgnPmKZ6",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000002
+    "createdAt": 1710000000002,
+    "address": "110 Don Carlos Palanca, Legazpi Village, Makati, Kalakhang Maynila",
+    "priceMin": null
   },
   {
     "id": "seed-4",
     "area": "makati",
     "category": "activities",
     "tags": [],
-    "name": "Paseo Makati",
+    "name": "Paseo Center",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/tcqlbHa.png",
+    "mapsLink": "https://maps.app.goo.gl/eApcBGRNKNFWeTWs9",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000003
+    "createdAt": 1710000000003,
+    "address": "8757 Paseo de Roxas, Makati City, Metro Manila",
+    "priceMin": null
   },
   {
     "id": "seed-5",
     "area": "makati",
     "category": "cafes",
-    "tags": [],
-    "name": "Alo Cafe (Poblacion)",
+    "tags": [
+      "cafe",
+      "vietnamese"
+    ],
+    "name": "Alô Café",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/Bg1kW1a.png",
+    "mapsLink": "https://maps.app.goo.gl/beqAi6dyMnWtQVMv7",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000004
+    "createdAt": 1710000000004,
+    "address": "4344 B. Valdez, Makati, 1210 Kalakhang Maynila",
+    "priceMin": null
   },
   {
     "id": "seed-6",
@@ -306,15 +318,21 @@
     "id": "seed-22",
     "area": "makati",
     "category": "cafes",
-    "tags": [],
+    "tags": [
+      "nature",
+      "al fresco",
+      "flowers"
+    ],
     "name": "59 Flower Cafe",
     "description": "",
-    "image": "",
-    "mapsLink": "",
+    "image": "https://i.imgur.com/Bn1IZDw.jpeg",
+    "mapsLink": "https://maps.app.goo.gl/qsKQC6ZZ7J6T7i3m9",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000021
+    "createdAt": 1710000000021,
+    "address": "59 Paseo de Roxas, Makati City, Metro Manila",
+    "priceMin": null
   },
   {
     "id": "seed-23",

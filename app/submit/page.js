@@ -49,7 +49,7 @@ export default function SubmitPage() {
         Suggest a spot
       </h1>
       <p className="text-inkmuted mb-6 max-w-lg">
-        Found a cute place we should add? Fill this in — it'll get reviewed
+        Found a cute place we should add? Fill this in, it'll get reviewed
         before it shows up on the site.
       </p>
       {error && <p className="text-cherry mb-4">{error}</p>}

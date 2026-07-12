@@ -11,13 +11,13 @@ export default function AboutPage() {
       <div className="bg-cream border border-mauve/20 rounded-signboard p-6 sm:p-8 shadow-card flex flex-col gap-4 text-ink leading-relaxed">
         <p>
           <span className="font-display font-bold text-maroon">Liyag</span>{" "}
-          means "beloved" — and that's basically what this is: a running list
+          means "beloved", and that's basically what this is: a running list
           of the cute, comfy, worth-the-commute spots around Manila that we
           actually go to with each other.
         </p>
         <p>
           We kept losing track of good places in group chats and screenshots,
-          so this exists to fix that — one map, organized by city, category,
+          so this exists to fix that, one map, organized by city, category,
           and vibe, with everything you need to actually get there: a Maps
           link, how to commute, and the menu.
         </p>
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <a href="/submit" className="text-cherry font-semibold hover:underline">
             send it in
           </a>{" "}
-          — we'd love to add it.
+          , we'd love to add it ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
         </p>
       </div>
     </div>

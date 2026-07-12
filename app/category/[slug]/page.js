@@ -20,7 +20,7 @@ export default async function CategoryPage({ params }) {
         {category.name}
       </h1>
       <p className="text-inkmuted mb-6">
-        Every {category.name.toLowerCase()} spot we've got, across the city.
+        list of {category.name.toLowerCase()} spots we found ! ⋆˚꩜｡.
       </p>
 
       <CategoryExplorer spots={spots} />
