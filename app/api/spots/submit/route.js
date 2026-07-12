@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { addSpot } from "@/lib/store";
-import { AREAS, CATEGORIES } from "@/lib/data";
+import { AREAS, CATEGORIES, areaBySlug, categoryBySlug } from "@/lib/data";
 
 // Public endpoint — no password required. Anyone can suggest a spot, but
 // it's saved with status "pending" and stays invisible on the public site
@@ -37,5 +37,27 @@ export async function POST(request) {
     status: "pending",
   });
 
+  notifyDiscord(spot).catch((err) =>
+    console.error("Discord notification failed:", err)
+  );
+
   return NextResponse.json({ spot }, { status: 201 });
+}
+
+async function notifyDiscord(spot) {
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+  if (!webhookUrl) return;
+
+  const area = areaBySlug(spot.area)?.name || spot.area;
+  const category = categoryBySlug(spot.category)?.name || spot.category;
+
+  await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      content: `💌 New spot suggested: **${spot.name}** (${area} · ${category})${
+        spot.description ? `\n> ${spot.description}` : ""
+      }\nReview it at your site's \`/admin\` → Pending review.`,
+    }),
+  });
 }

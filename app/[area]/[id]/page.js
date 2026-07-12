@@ -75,7 +75,7 @@ export default async function SpotDetailPage({ params }) {
 
           <div className="flex flex-wrap gap-2 mt-6">
             {spot.mapsLink && (
-              
+              <a
                 href={spot.mapsLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default async function SpotDetailPage({ params }) {
               </a>
             )}
             {spot.menuLink && (
-              
+              <a
                 href={spot.menuLink}
                 target="_blank"
                 rel="noopener noreferrer"

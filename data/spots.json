@@ -508,14 +508,15 @@
     "area": "makati",
     "category": "food",
     "tags": [],
-    "name": "Kodawari (CR)",
+    "name": "Kodawari ",
     "description": "",
     "image": "",
-    "mapsLink": "",
+    "mapsLink": "https://maps.app.goo.gl/TjBntH47JDfHJP7EA",
     "commute": "",
     "menuLink": "",
     "priceRange": "",
-    "createdAt": 1710000000036
+    "createdAt": 1710000000036,
+    "address": "Salcedo Village, 121 L.P. Leviste Street, Makati City, 1227 Metro Manila"
   },
   {
     "id": "seed-38",
