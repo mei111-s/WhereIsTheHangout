@@ -6,11 +6,6 @@ import { sortSpots, SORT_OPTIONS } from "@/lib/sort";
 import SpotCard from "@/components/SpotCard";
 
 export default function CategoryExplorer({ spots }) {
-  const areasWithSpots = useMemo(() => {
-    const slugsPresent = new Set(spots.map((s) => s.area));
-    return AREAS.filter((a) => slugsPresent.has(a.slug));
-  }, [spots]);
-
   const [activeArea, setActiveArea] = useState(null); // null = all areas
   const [activeTag, setActiveTag] = useState(null);
   const [sortBy, setSortBy] = useState("name-asc");
@@ -34,7 +29,16 @@ export default function CategoryExplorer({ spots }) {
   }, [spotsInArea, activeTag, sortBy]);
 
   if (spots.length === 0) {
-    return <p className="text-inkmuted mt-6">No spots in this category yet.</p>;
+  if (spots.length === 0) {
+    return (
+      <p className="text-inkmuted mt-6">
+        No spots in this category yet.{" "}
+        <a href="/submit" className="text-cherry underline">
+          Know one? Suggest it!
+        </a>
+      </p>
+    );
+  }
   }
 
   return (
@@ -51,7 +55,7 @@ export default function CategoryExplorer({ spots }) {
         >
           All cities
         </button>
-        {areasWithSpots.map((area) => (
+        {AREAS.map((area) => (
           <button
             key={area.slug}
             data-active={activeArea === area.slug}

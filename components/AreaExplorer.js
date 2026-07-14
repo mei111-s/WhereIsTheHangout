@@ -38,11 +38,10 @@ export default function AreaExplorer({ spots }) {
   if (spots.length === 0) {
     return (
       <p className="text-inkmuted mt-6">
-        No spots here yet — add some from{" "}
-        <a href="/admin" className="text-cherry underline">
-          /admin
+        No spots here yet.{" "}
+        <a href="/submit" className="text-cherry underline">
+          Know one? Suggest it!
         </a>
-        .
       </p>
     );
   }
