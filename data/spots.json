@@ -1453,5 +1453,49 @@
     "menuLink": "",
     "priceRange": "",
     "priceMin": null
+  },
+  {
+    "id": "84fbfe8d-0bd7-452b-9bbc-2818cec4ef64",
+    "createdAt": 1784009672652,
+    "status": "published",
+    "address": "144 Ilang-Ilang, Gregoria Heights, Taytay, 1920 Rizal",
+    "area": "taytay",
+    "category": "food",
+    "tags": [
+      "taiwanese",
+      "xiaolongbao",
+      "dimsum",
+      "asian"
+    ],
+    "name": "Wok it Out",
+    "description": "",
+    "image": "",
+    "mapsLink": "https://maps.app.goo.gl/JyTwTwEgGHPkS6R46",
+    "commute": "",
+    "menuLink": "",
+    "priceRange": "",
+    "priceMin": null
+  },
+  {
+    "id": "e294e079-4846-497d-b01e-53ee9fde585d",
+    "createdAt": 1784009778522,
+    "status": "published",
+    "address": "Marikina-Infanta Hwy, Marikina, 1800 Metro Manila",
+    "area": "marikina",
+    "category": "cafes",
+    "tags": [
+      "coffee",
+      "breakfast",
+      "pastries",
+      "pasta"
+    ],
+    "name": "Chapter Coffee Roastery & Cafe ",
+    "description": "",
+    "image": "",
+    "mapsLink": "https://maps.app.goo.gl/dk46Q3fxUC92cLoo7",
+    "commute": "",
+    "menuLink": "",
+    "priceRange": "",
+    "priceMin": null
   }
 ]
